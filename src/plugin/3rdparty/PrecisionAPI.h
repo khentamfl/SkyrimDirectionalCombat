@@ -1,5 +1,5 @@
 #pragma once
-
+#include <windows.h>
 /*
 * For modders: Copy this file into your own project if you wish to use this API
 */
