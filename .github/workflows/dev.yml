@@ -14,6 +14,10 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
+    - name: Cache Folders
+      uses: actions/cache@v4.0.0
+      with:
+        path: '.xmake\packages'
     - name: Setup xMake
       uses: xmake-io/github-action-setup-xmake@v1
       with:
