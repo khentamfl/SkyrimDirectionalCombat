@@ -27,13 +27,13 @@ set_policy("package.requires_lock", true)
 add_requires("fmt", "spdlog")
 add_requires("commonlibsse-ng", { configs = { skyrim_vr = false }})
 
+add_links("Kernel32")
 -- includes
 includes("res/package.lua")
 
 -- targets
 target("direction-plugin")
     add_packages("fmt", "spdlog", "commonlibsse-ng")
-    add_links("Kernel32")
 
     add_rules("@commonlibsse-ng/plugin", {
         name = "direction-plugin",
