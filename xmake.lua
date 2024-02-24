@@ -24,7 +24,7 @@ add_rules("plugin.vsxmake.autoupdate")
 set_policy("package.requires_lock", true)
 
 -- packages
-add_requires("fmt 10.2.0", "spdlog")
+add_requires("fmt", "spdlog")
 add_requires("commonlibsse-ng", { configs = { skyrim_vr = false }})
 
 -- includes
@@ -33,6 +33,7 @@ includes("res/package.lua")
 -- targets
 target("direction-plugin")
     add_packages("fmt", "spdlog", "commonlibsse-ng")
+    add_links("Kernel32")
 
     add_rules("@commonlibsse-ng/plugin", {
         name = "direction-plugin",
