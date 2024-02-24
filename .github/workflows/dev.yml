@@ -1,2 +1,16 @@
-name: setup xmake
-uses: xmake-io/github-action-setup-xmake@v1
+name: xMake CI
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: setup xmake
+      uses: xmake-io/github-action-setup-xmake@v1
