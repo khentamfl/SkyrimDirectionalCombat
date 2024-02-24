@@ -20,7 +20,7 @@ jobs:
         actions-cache-folder: '.xmake-cache'
     - name: Upgrade project dependencies
       run: |
-        xmake require --upgrade
+        xmake require --upgrade -y
     - name: Build Project
       run: |
         xmake build -y
