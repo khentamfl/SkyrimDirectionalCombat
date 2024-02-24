@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: windows-2019
 
     steps:
     - name: Checkout Code
@@ -17,7 +17,6 @@ jobs:
     - name: Setup xMake
       uses: xmake-io/github-action-setup-xmake@v1
       with:
-        xmake-version: '2.7.2'
         actions-cache-folder: '.xmake-cache'
     - name: Build Project
       run: |
