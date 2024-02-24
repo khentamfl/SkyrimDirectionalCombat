@@ -12,5 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: setup xmake
+    - name: Setup xMake
       uses: xmake-io/github-action-setup-xmake@v1
+    - name: Create Packagee with xMake
+      run: |
+        xmake package
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: skyrimdirectionalcombat
+        path: build/packages
