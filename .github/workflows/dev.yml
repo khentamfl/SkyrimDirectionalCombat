@@ -18,7 +18,7 @@ jobs:
       uses: xmake-io/github-action-setup-xmake@v1
     - name: Build Project
       run: |
-        xmake build
+        xmake build -y
     - name: Create Package with xMake
       run: |
         xmake package
