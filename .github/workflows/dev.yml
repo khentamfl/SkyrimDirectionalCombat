@@ -12,12 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
     - name: Setup xMake
       uses: xmake-io/github-action-setup-xmake@v1
     - name: Create Packagee with xMake
       run: |
         xmake package
-      working-directory: ${{ github.workspace }}
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
